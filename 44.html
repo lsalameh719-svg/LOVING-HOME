@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الصور</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="font-controls">
+<button onclick="increaseFont()">A+</button>
+<button onclick="decreaseFont()">A-</button>
+</div>
+<div class="logo">
+    <img src="dcdde798-90e2-403d-bfb2-c3b7abb5b4db.jpg" alt="لوفيغ هومز">
+</div>
+<h1> لوفينغ هوميز </h1>
+
+<nav>
+<a href="11.html">الرئيسية</a>
+<a href="22.html"> مرافق اخرى</a>
+<a href="33.html">الخدمات المتقدمة </a>
+<a href="44.html">الصور</a>
+<a href="66.html"> اهم نصائح</a>
+<a href="77.html">الاسئلة الشائعة</a>
+<a href="55.html">تواصل</a>
+
+</nav>
+
+</header>
+<section class="page">
+<h2>الصور عن الفندق  </h2>
+<div class="gallery">
+<img src="7b53836a-64ea-474f-978a-f2d944475a49.jpg">
+<img src="feb1e2ba-3fd8-4117-89a1-e47f783aa0ac.jpg">
+<img src="145beaa5-2818-4d9f-aa6d-c6ad442f2f5c.jpg">
+
+</div>
+
+</section>
+<script>
+
+const links = document.querySelectorAll("nav a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+
+if(link.getAttribute("href") === currentPage){
+link.classList.add("active");
+}
+
+});
+let fontSize = 16;
+
+function increaseFont(){
+fontSize += 2;
+document.body.style.fontSize = fontSize + "px";
+}
+
+function decreaseFont(){
+fontSize -= 2;
+document.body.style.fontSize = fontSize + "px";
+}
+</script>
+
+<footer>
+<p>© 2025 لوفينغ هوميز</p>
+</footer>
+
+</body>
+</html>

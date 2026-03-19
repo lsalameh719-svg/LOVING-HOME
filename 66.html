@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>مرافق اخرى  </title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<header>
+    <div class="font-controls">
+<button onclick="increaseFont()">A+</button>
+<button onclick="decreaseFont()">A-</button>
+</div>
+<div class="logo">
+    <img src="dcdde798-90e2-403d-bfb2-c3b7abb5b4db.jpg" alt="لوفيغ هومز">
+</div>
+<h1>لوفينغ هوميز  </h1>
+
+<nav>
+<a href="11.html">الرئيسية</a>
+<a href="22.html"> مرافق اخرى</a>
+<a href="33.html">الخدمات المتقدمة </a>
+<a href="44.html">الصور</a>
+<a href="66.html"> اهم نصائح</a>
+<a href="77.html">الاسئلة الشائعة</a>
+<a href="55.html">تواصل</a>
+
+</nav>
+
+</header>
+<center>
+<video width="640" height="360" controls>
+  <source src="WhatsApp Video 2026-03-13 at 6.16.30 PM.mp4" type="video/mp4">
+</video>
+</center>
+ 
+<section class="page">
+    <footer>
+<p>© 2025 لوفينغ هومز</p>
+</footer>
+<script>
+
+const links = document.querySelectorAll("nav a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+
+if(link.getAttribute("href") === currentPage){
+link.classList.add("active");
+}
+
+});
+let fontSize = 16;
+
+function increaseFont(){
+fontSize += 2;
+document.body.style.fontSize = fontSize + "px";
+}
+
+function decreaseFont(){
+fontSize -= 2;
+document.body.style.fontSize = fontSize + "px";
+}
+</script>

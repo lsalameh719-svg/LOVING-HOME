@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>الخدمات</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<header>
+    <div class="font-controls">
+<button onclick="increaseFont()">A+</button>
+<button onclick="decreaseFont()">A-</button>
+</div>
+<div class="logo">
+    <img src="dcdde798-90e2-403d-bfb2-c3b7abb5b4db.jpg" alt="لوفيغ هومز">
+</div>
+<h1>لوفينغ هوميز </h1>
+<nav>
+<a href="11.html">الرئيسية</a>
+<a href="22.html"> مرافق اخرى</a>
+<a href="33.html">الخدمات المتقدمة </a>
+<a href="44.html">الصور</a>
+<a href="66.html"> اهم نصائح</a>
+<a href="77.html">الاسئلة الشائعة</a>
+<a href="55.html">تواصل</a>
+
+</nav>
+
+</header>
+<section class="page">
+<h2>خدماتنا</h2>
+<div class="services">
+<div class="service">
+<h3> المميزة </h3>
+<p>في هذه الحزمة توفر صور يومية للكلاب وايضا تمشية لاربع مرات في اليوم او لعب اربع انشطة مختلفة وكافات في حال اراد المالك مساحةعشب خاصة بالكلب </p>
+<img src="download.jpg"height="250px" width="100%">
+<button onclick="bookService()">احجز هذه الخدمة</button>
+</div>
+<div class="service">
+<h3>الكلاسيكية</h3>
+<p>في هذه الحزمة نوفر لكم ثلاث انشطة للكلب او المشي ثلاث مرات وايضا نوفر حلاقة للكلب وتنظيفه ومنطقة للكلب حتى يستترحي وايضا حظيرة لعب لكنها داخلية </p>
+<img src="download (1).jpg"height="250px" width="100%">
+<button onclick="bookService()">احجز هذه الخدمة</button>
+</div>
+<div class="service">
+<h3>اليوم</h3>
+<p> في هذه الحزمة نوفر للكلب مرتين للتمشي معه وايضا ومنطقة للعب خارجيا ومسار الرشاقة وحفر بالرمل هذه للانشطة الت ي توفرها حزمة اليوم</p>
+<img src="95eb07dc-aa0b-41ad-9954-d24d49aa9658.jpg"height="250px" width="100%">
+<button onclick="bookService()">احجز هذه الخدمة</button>
+</div>
+<div class="service">
+<h3>حزمة مخصصة</h3>
+<p> هذه الحزم تكون منوفرة للاشخاص الذين يسافرون او الاشخاص الذين يريدون ان تبقى الكلاب في الفندق لفترة طويلة وتوفر هذه الحزمة اضافات جانبية للكلاب التي يريدها العميل لكلبه ويمكن اذافة الميزات التي تريدها من خلال تواصلك معنا عبر الموقع </p>
+<img src="830c3a69-3e9c-4214-804b-a409d3c25b7e.jpg"height="250px" width="100%">
+<button onclick="bookService()">احجز هذه الخدمة</button>
+
+</div>
+</section>
+<script>
+function bookService() {
+  alert("تم إرسال طلب ");
+}
+</script>
+<script>
+const links = document.querySelectorAll("nav a");
+const currentPage = window.location.pathname.split("/").pop();
+links.forEach(link => {
+if(link.getAttribute("href") === currentPage){
+link.classList.add("active");
+}
+});
+ let fontSize = 16;
+
+function increaseFont(){
+fontSize += 2;
+document.body.style.fontSize = fontSize + "px";
+}
+
+function decreaseFont(){
+fontSize -= 2;
+document.body.style.fontSize = fontSize + "px";
+}
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.05)";
+    card.style.transition = "0.3s";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)";
+  });
+});
+</script>
+
+
+<footer>
+<p>© 2025 لوفينغ هومز</p>
+</footer>
+
+</body>
+</html>

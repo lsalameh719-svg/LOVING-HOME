@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>مرافق اخرى  </title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<header>
+    <div class="font-controls">
+<button onclick="increaseFont()">A+</button>
+<button onclick="decreaseFont()">A-</button>
+</div>
+<div class="logo">
+    <img src="dcdde798-90e2-403d-bfb2-c3b7abb5b4db.jpg" alt="لوفيغ هومز">
+</div>
+<h1>لوفينغ هوميز  </h1>
+
+<nav>
+<a href="11.html">الرئيسية</a>
+<a href="22.html"> مرافق اخرى</a>
+<a href="33.html">الخدمات المتقدمة </a>
+<a href="44.html">الصور</a>
+<a href="66.html"> اهم نصائح</a>
+<a href="77.html">الاسئلة الشائعة</a>
+<a href="55.html">تواصل</a>
+
+</nav>
+
+</header>
+
+<section class="page">
+
+<h2>مرافق اخرى  </h2>
+
+<p><h3>نقدم لكم افضل المرافق وليس فقط هذه المرافق الموجودة في الصفحة سوف فنحن لدينا العديد من المرافق ولدينا العديد من الخدمات التي توفر لكلبك الراحة </h3>
+</p>
+<p> <h4>لدينا خدمة مراقبة الكلاب التي تساعد كلبك على ان يبقى بامان داخا الفندق دون الخوف عليه  </h4></p>
+<img src="231967dd-0766-4296-83fa-7386be36f6d6.jpg"hight="40px;"widthe="40%">
+<p><h2>  تمشية في الغابات  </h2></p>
+<p><h3> نحن نوفر لكلبك خدة المشي وهي ان نقوم باخذه في فندقنا الذي يحتوي على ساحات خارجية للمشي مما يستمتع بوقته ونجعله يجرب نشاط مما يجعل الكلب يشعربالسعادة لأن الكلاب تفضل المشي </h3></p>
+<img src="images.jpg"hight="40px;"widthe="40%">
+<p><h2> مساحات خارجية </h2></p>
+<p><h3>ويتوفر لدينا اكبر مساحات واسعة التي تساعد الكلب على المشي واللعب والتنزه فيها دون خوف عليه مما تعطي الحرية الكاملة لكلبك دون خوف ويكون في مكان امن </h3></p>
+<img src="8db52d6cb29944dd57e20aa67e17286e.jpg"hight="40px;"widthe="40%">
+<p><h2>حظيرة لعب داخلية </h2></p>
+<p><h3>ولدينا افضل العاب واشهرها الخاصة بالكلاب فقط التي تساعد في ملئ وقتهم ويستمتعوا به مما توفر الرفاهية التي تساعدهم في الاستمتاع </h3></p>
+<img src="78f95826-3b01-4e17-94ed-8b639b134baa.jpg"hight="40px;"widthe="40%">
+
+</section>
+
+<script>
+
+
+const links = document.querySelectorAll("nav a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+
+if(link.getAttribute("href") === currentPage){
+link.classList.add("active");
+}
+
+});
+let fontSize = 16;
+
+function increaseFont(){
+fontSize += 2;
+document.body.style.fontSize = fontSize + "px";
+}
+
+function decreaseFont(){
+fontSize -= 2;
+document.body.style.fontSize = fontSize + "px";
+}
+</script>
+
+<footer>
+<p>© 2025 لوفينغ هوميز </p>
+</footer>
+
+</body>
+</html>

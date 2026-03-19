@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الحجز</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>لوفينغ هومز</h1>
+<div class="font-controls">
+<button onclick="increaseFont()">A+</button>
+<button onclick="decreaseFont()">A-</button>
+</div>
+<div class="logo">
+    <img src="dcdde798-90e2-403d-bfb2-c3b7abb5b4db.jpg" alt="لوفيغ هومز">
+</div>
+<nav>
+<a href="11.html">الرئيسية</a>
+<a href="22.html"> مرافق اخرى</a>
+<a href="33.html">الخدمات المتقدمة </a>
+<a href="44.html">الصور</a>
+<a href="66.html"> اهم نصائح</a>
+<a href="77.html">الاسئلة الشائعة</a>
+<a href="55.html">تواصل</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<form class="booking-form">
+
+<h2>نموذج الحجز</h2>
+
+<input type="text" placeholder="الاسم" autocomplete="off" required>
+
+<select required>
+<option>اختر الخدمة</option>
+<option>حجز يومي</option>
+<option>الباقة الكلاسيكية</option>
+<option>الباقة المميزة</option>
+</select>
+
+<input type="date" required>
+
+<textarea placeholder="ملاحظات إضافية"></textarea>
+
+<button type="submit">إرسال الحجز</button>
+
+</form>
+<script>
+document.querySelector(".booking-form").addEventListener("submit", function(event) {
+event.preventDefault();
+alert("تم إرسال الحجز بنجاح");
+});
+</script>
+<script>
+
+const links = document.querySelectorAll("nav a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+
+if(link.getAttribute("href") === currentPage){
+link.classList.add("active");
+}
+
+});
+let fontSize = 16;
+
+function increaseFont(){
+fontSize += 2;
+document.body.style.fontSize = fontSize + "px";
+}
+
+function decreaseFont(){
+fontSize -= 2;
+document.body.style.fontSize = fontSize + "px";
+}
+</script>
+
+</div>
+
+</div>
+
+</body>
+</html>
