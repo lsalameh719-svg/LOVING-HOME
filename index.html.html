@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لوفينغ هوميز</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<header>
+    <div class="font-controls">
+<button onclick="increaseFont()">A+</button>
+<button onclick="decreaseFont()">A-</button>
+    </div>
+<div class="logo">
+    <img src="dcdde798-90e2-403d-bfb2-c3b7abb5b4db.jpg" alt="لوفيغ هومز">
+
+</div>
+<h1>لوفينغ هوميز</h1>
+
+<nav>
+<a href="11.html">الرئيسية</a>
+<a href="22.html"> مرافق اخرى</a>
+<a href="33.html">الخدمات المتقدمة </a>
+<a href="44.html">الصور</a>
+<a href="66.html"> اهم نصائح</a>
+<a href="77.html">الاسئلة الشائعة</a>
+<a href="55.html">تواصل</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>صالة للحلاقة والمنتجع</h2>
+
+<h4>
+نوفر لكم لكم افضل الصالات في حتى نقزم بالحلاقة للكلب
+ونوفر له كل ما يلزمه ونوفر لكم ايضا منتجع للكلاب
+</h4>
+
+<div class="gallery">
+<img src="f42a6611-627a-4976-abb6-e8549910764b.jpg">
+<img src="69679570-4380-49d5-a4a5-60e02862c76f.jpg">
+</div>
+
+</section>
+
+<section class="info">
+
+<div class="card">
+<h3>مرافق خارجية</h3>
+<p>
+لدينا افضل الاماكن التي تجعل كلبك يلعب بكل حرية
+وهذه الاماكن امنة جدا
+</p>
+
+<img src="78602f4e-4bc6-4d44-9266-7b1017324f22.jpg" height="250px" width="100%">
+</div>
+
+<div class="card">
+<h3>غرف تدفئة تلفزيون</h3>
+<p>
+نوفر لحبوانك الاليف غرف نظيفة ومريحة مع تلفزيون
+مما تجعله يشعر بالراحة الكافية
+</p>
+
+<img src="bb182c65-3b09-4bc3-a6d4-436ec0e6162f.jpg" height="250px" width="100%">
+</div>
+
+<div class="card">
+<h3>خدمة التوصيل</h3>
+<p>
+نوفر لكم خدمة توصيل الى اي مكان تريددوه
+مما نوصل كلبك او ناتي الى اخذه
+</p>
+
+<img src="57518781-f90b-46a3-8a96-e3772c79b514.jpg" height="250px" width="100%">
+</div>
+
+<div class="card">
+<h3>خدمات بيطرية</h3>
+<p>
+ونحن لدينا افضل الاطباء البيطيرة الذين
+سيساعدون كلبك الاليف في حال حدوث للكلب اي شيء
+</p>
+
+<img src="bb6b6948-0af1-4dbb-8a35-f26588878e4a.jpg" height="250px" width="100%">
+</div>
+
+</section>
+
+<script>
+
+const links = document.querySelectorAll("nav a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+if(link.getAttribute("href") === currentPage){
+link.classList.add("active");
+}
+});
+let fontSize = 16;
+function increaseFont(){
+fontSize += 2;
+document.body.style.fontSize = fontSize + "px";
+}
+function decreaseFont(){
+fontSize -= 2;
+document.body.style.fontSize = fontSize + "px";
+}
+</script>
+
+<footer>
+<p>© 2025 لوفينغ هوميز</p>
+</footer>
+
+</body>
+</html>
